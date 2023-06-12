@@ -21,7 +21,7 @@ class KGCN(torch.nn.Module):
         self.aggregator = Aggregator(self.batch_size, self.dim, args.aggregator)
         
         self._gen_adj()
-            
+        
         self.usr = torch.nn.Embedding(num_user, args.dim)
         self.ent = torch.nn.Embedding(num_ent, args.dim)
         self.rel = torch.nn.Embedding(num_rel, args.dim)

@@ -14,7 +14,7 @@ class DataLoader:
             'movie': {
                 'item2id_path': 'data/movie/item_index2entity_id.txt',
                 'kg_path': 'data/movie/kg.txt',
-                'rating_path': 'data/movie/ratings.csv',
+                'rating_path': '../ratings.csv',
                 'rating_sep': ',',
                 'threshold': 4.0
             },
@@ -87,7 +87,7 @@ class DataLoader:
             item_set = set(group['itemID'])
             negative_set = full_item_set - item_set
             negative_sampled = random.sample(negative_set, len(item_set))
-            user_list.extend([user] * len(negative_sampled))
+            user_list.extend([user[0]] * len(negative_sampled))
             item_list.extend(negative_sampled)
             label_list.extend([0] * len(negative_sampled))
         negative = pd.DataFrame({'userID': user_list, 'itemID': item_list, 'label': label_list})

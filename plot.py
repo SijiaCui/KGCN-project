@@ -55,7 +55,7 @@ def draw_exp1():
     nums = len(train_loss_list)
     epochs = range(len(train_loss_list[0]))
     
-    plt.figure(figsize=(10,5))
+    plt.figure(figsize=(10 * scale,5 * scale))
     # draw train loss
     plt.subplot(1, 3, 1)
     for i in range(nums):
@@ -97,7 +97,7 @@ def draw_exp2():
     nums = len(train_loss_list)
     epochs = range(len(train_loss_list[0]))
 
-    plt.figure(figsize=(10,5))
+    plt.figure(figsize=(10 * scale,5 * scale))
     # draw train loss
     plt.subplot(1, 3, 1)
     for i in range(nums):
@@ -139,7 +139,7 @@ def draw_exp3():
     nums = len(train_loss_list)
     epochs = range(len(train_loss_list[0]))
 
-    plt.figure(figsize=(8,6))
+    plt.figure(figsize=(8 * scale,6 * scale))
     # draw train loss
     plt.subplot(2, 2, 1)
     for i in range(nums):
@@ -189,7 +189,7 @@ def draw_exp4():
     nums = len(train_loss_list)
     epochs = range(len(train_loss_list[0]))
 
-    plt.figure(figsize=(8,6))
+    plt.figure(figsize=(8 * scale,6 * scale))
     # draw train loss
     plt.subplot(2, 2, 1)
     for i in range(nums):
@@ -233,6 +233,7 @@ def draw_exp4():
     # plt.show()
 
 
+scale = 1.
 colors = ['r', 'b', 'g', 'y', 'm']
 draw_exp1()
 draw_exp2()
